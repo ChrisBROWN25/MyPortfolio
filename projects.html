@@ -2,23 +2,10 @@
 <html lang="en">
 
 <head>
-  <script>
-    // Apply theme class before CSS loads to prevent flash
-    (function () {
-      let theme = localStorage.getItem('theme');
-      if (!theme) {
-        theme = 'light';
-        localStorage.setItem('theme', 'light');
-      }
-      if (theme === 'light') {
-        document.documentElement.classList.add('light-mode');
-      }
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CJLC Portfolio</title>
-  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <script>
@@ -27,112 +14,38 @@
 
 <body>
   <header>
-    <div class="navbar"></div>
+    <div class="navbar">
+    </div>
   </header>
   <main>
-    <section class="projects-list">
-  
-      <!-- Project Card 1 -->
-      <div class="project-card project-red-green">
-        <div class="project-info">
-          <h2>NU Catalogue: Inventory Management System</h2>
-          <div class="project-date">August 2022 - March 2023</div>
-          <p class="justify">
-            The NU Catalogue allows effective inventory and client information management. It reduces the stress of handling data by
-            creating sales report on a daily basis indicating net sales figures on the selected date. This overall process improves
-            the quality and the reliability of this operations.
-          </p>
-          <div class="project-tech">
-            <i class="fa-brands fa-bootstrap"></i>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-js"></i>
-            <i class="fa-solid fa-database" title="MySQL"></i>
-            <i class="fa-brands fa-php"></i>
-          </div>
-          <a href="https://github.com/ChrisBROWN25/NU-Catalogue-Inventory-Management-System" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="profile-img">
+          <img src="images/developerimage.png" alt="Your Name - Profile Picture">
         </div>
-        <!-- Image Preview Modal -->
-        <div id="image-modal" class="image-modal">
-          <span class="image-modal-close">&times;</span>
-          <img class="image-modal-content" id="image-modal-img" alt="Project Preview">
-        </div>
-        <div class="project-image-slider">
-          <button class="img-nav left" aria-label="Previous" onclick="prevImage(0)"><i
-              class="fa-solid fa-arrow-left"></i></button>
-          <img id="project-img-0" src="images/nucatalogue/project1.png" alt="FindaHost Screenshot">
-          <button class="img-nav right" aria-label="Next" onclick="nextImage(0)"><i
-              class="fa-solid fa-arrow-right"></i></button>
+        <div class="socials">
+          <a href="https://www.facebook.com/christphr.jn" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/ChrisBROWN25" target="_blank"> <i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/christopher-jan-cayabyab-746996271/" target="_blank"> <i
+              class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:cayabyabchristopherjan@gmail.com?subject=Inquiry from your website&body=Hello Christopher Jan,"
+            target="_blank"> <i class="fa-solid fa-square-envelope"></i> </a>
         </div>
       </div>
-  
-      <!-- Project Card 2 -->
-      <div class="project-card project-red-green2">
-        <div class="project-info">
-          <h2>NU Laguna: Queueing System</h2>
-          <div class="project-date">August 2023 - January 2024</div>
-          <p class="justify">
-            As a clear and usable system, the NU Laguna Queueing System supports staff's workings and improves the experience
-            between customers and employees. Each office module features self-managing client flow and queuing for enhanced
-            efficiency and organization.
-          </p>
-          <div class="project-tech">
-            <i class="fa-brands fa-bootstrap"></i>
-            <i class="fa-brands fa-html5"></i>
-            <i class="fa-brands fa-css3-alt"></i>
-            <i class="fa-brands fa-js"></i>
-            <i class="fa-solid fa-database" title="MySQL"></i>
-            <i class="fa-brands fa-php"></i>
-          </div>
-          <a href="https://github.com/ChrisBROWN25/NU-Laguna-Queueing-System" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
-        </div>
-        <!-- Image Preview Modal -->
-        <div id="image-modal" class="image-modal">
-          <span class="image-modal-close">&times;</span>
-          <img class="image-modal-content" id="image-modal-img" alt="Project Preview">
-        </div>
-        <div class="project-image-slider">
-          <button class="img-nav left" aria-label="Previous" onclick="prevImage(1)"><i
-              class="fa-solid fa-arrow-left"></i></button>
-          <img id="project-img-1" src="images/nul-queue/project1.png" alt="NU Laguna Screenshot">
-          <button class="img-nav right" aria-label="Next" onclick="nextImage(1)"><i
-              class="fa-solid fa-arrow-right"></i></button>
+      <div>
+        <div class="hero-right">
+          <h1 class="justify">Bringing Ideas to Life, One Line of Code.</h1>
+          <p class="justify">Hi, I'm Christopher Jan, aspiring software engineer actively involved in the web
+            development world, focused on
+            developing scalable and efficient systems. I am a solution minded developer with a hunger for learning new
+            technologies and the knowledge to keep
+            your application running at peak performance and high quality.</p>
+          <a href="CayabyabResume.pdf" target="_blank" download="CayabyabResume.pdf" class="resume-btn">Download
+            Resume</a>
         </div>
       </div>
-
-  <!-- Project Card 3 -->
-  <div class="project-card project-red-green3">
-    <div class="project-info">
-      <h2>NETI: Supplier Management System</h2>
-      <div class="project-date">January 2024 - May 2024</div>
-      <p class="justify">
-        It is a strong, user-friendly supplier management system that simplifies supplier administration and communication. This
-        system makes use of Laravel Livewire to deploy dynamic, real-time user interfaces, which tend to make the platform more
-        responsive and interactive. It simplifies processes like ordering, maintaining contracts, staying up to date.
-      </p>
-      <div class="project-tech">
-        <i class="fa-brands fa-bootstrap"></i>
-        <i class="fa-brands fa-js"></i>
-        <i class="fa-brands fa-laravel"></i>
-        <i class="fa-solid fa-database" title="MySQL"></i>
-      </div>
-      <a href="https://github.com/ChrisBROWN25/NETI-Supplier-Management-System" class="project-btn" target="_blank"><i class="fa-brands fa-github"></i> View on GitHub</a>
-    </div>
-    <!-- Image Preview Modal -->
-    <div id="image-modal" class="image-modal">
-      <span class="image-modal-close">&times;</span>
-      <img class="image-modal-content" id="image-modal-img" alt="Project Preview">
-    </div>
-    <div class="project-image-slider">
-      <button class="img-nav left" aria-label="Previous" onclick="prevImage(2)"><i
-          class="fa-solid fa-arrow-left"></i></button>
-          <img id="project-img-2" src="images/neti-cms/project1.png" alt="NETI Screenshot">
-      <button class="img-nav right" aria-label="Next" onclick="nextImage(2)"><i
-          class="fa-solid fa-arrow-right"></i></button>
-    </div>
-  </div>
     </section>
-    </main>
+  </main>
   <footer>
     <div class="footer-left">
       © 2025 Christopher Jan Llanes Cayabyab. All rights reserved.
@@ -141,9 +54,7 @@
       This Portfolio was made using CSS, HTML and JavaScript
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="javascript/script.js"></script>
- 
 </body>
 
 </html>

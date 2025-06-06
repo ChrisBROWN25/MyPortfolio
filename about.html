@@ -2,19 +2,6 @@
 <html lang="en">
 
 <head>
-  <script>
-    // Apply theme class before CSS loads to prevent flash
-    (function () {
-      let theme = localStorage.getItem('theme');
-      if (!theme) {
-        theme = 'light';
-        localStorage.setItem('theme', 'light');
-      }
-      if (theme === 'light') {
-        document.documentElement.classList.add('light-mode');
-      }
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CJLC Portfolio</title>
@@ -34,7 +21,6 @@
     <!-- Profile section for hero -->
     <section class="hero">
       <div class="hero-content">
-        <h2 class="skills-title">All About Me</h2>
         <img src="images/developer.jpg" alt="Profile Picture" class="profile-img">
         <p class="profile-text">
           I am Christopher Jan Llanes Cayabyab, graduated from National University Laguna - Asia Pacific College Program Extension
@@ -54,7 +40,6 @@
         This Portfolio was made using CSS, HTML and JavaScript
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="javascript/script.js"></script>
     </body>
     

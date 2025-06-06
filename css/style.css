@@ -213,7 +213,6 @@ main {
 }
 
 .socials a:hover {
-  transform: translateY(-6px) scale(1.04);
   background: var(--social-link-hover-bg);
   color: var(--social-link-hover-color);
 }
@@ -257,31 +256,30 @@ main {
 }
 
 footer {
-  width: 100%;
-  background: #000;
-  color: #fff;
-  padding: 24px 0 18px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.05rem;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  margin-top: auto;
+  font-size:0%;
+  padding: 28px 48px 24px 48px;
+  background: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  flex-wrap: wrap;
+  transition: background 0.3s ease, color 0.3s ease;
+  top: -3;
 }
 
 .footer-left,
 .footer-right {
-  margin: 0 40px;
-  font-size: 1rem;
-  opacity: 0.85;
+  margin: 0px;
+  position: relative;
+  font-size:medium;
+  top: -20px;
 }
 
 /* Light mode styles */
 body.light-mode {
   background: #fff;
-  color: #000;
+  color: #222;
 }
 
 body.light-mode header,
@@ -353,20 +351,6 @@ body.light-mode {
     /* Adjust right values to control spacing between them */
   }
 
-    footer {
-      flex-direction: column;
-      text-align: center;
-      gap: 10px;
-      font-size: 0.95rem;
-    }
-  
-    .footer-left,
-    .footer-right {
-      margin: 6px 0;
-      font-size: 0.95rem;
-    }
-    }
-
     @media (max-width: 700px) {
       .toggle-theme {
         right: 24px;
@@ -381,4 +365,4 @@ body.light-mode {
         position: absolute;
         top: 24px;
         display: flex;
-      } }
+      } }}

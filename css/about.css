@@ -112,25 +112,24 @@ main {
 }
 
 footer {
-  width: 100%;
-  background: #000;
-  color: #fff;
-  padding: 24px 0 18px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.05rem;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  margin-top: auto;
+  font-size: 0%;
+  padding: 28px 48px 24px 48px;
+  background: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  flex-wrap: wrap;
+  transition: background 0.3s ease, color 0.3s ease;
+  top: -3;
 }
 
 .footer-left,
 .footer-right {
-  margin: 0 40px;
-  font-size: 1rem;
-  opacity: 0.85;
+  margin: 0px;
+  position: relative;
+  font-size: medium;
+  top: -20px;
 }
 
 /* Light mode styles */
@@ -168,7 +167,7 @@ body.light-mode {
   justify-content: center;
   min-height: 80vh;
   width: 100%;
-  margin-top: -40px;
+  margin-top: -10px;
   
 }
 
@@ -190,7 +189,7 @@ body.light-mode {
   border-radius: 50%;
   object-fit: cover;
   background: #e3f6ff;
-  margin-bottom: -50px;
+  margin-bottom: 20px;
   border: 4px solid var(--profile-img-border);
 }
 
@@ -200,7 +199,7 @@ body.light-mode {
   font-size: 1rem;
   text-align: justify;
   font-family: 'Poppins', Arial, sans-serif;
-  margin-top: 80px;
+  margin-top: 30px;
   font-weight: bold;
 }
 
