@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+    --background-color: #000;
+    --text-color: #fff;
+    --header-bg-color: #000;
+    --logo-color: #7f4fff;
+    --logo-shadow: #00e6ff;
+    --nav-link-color: #fff;
+    --nav-link-hover-active-color: #00CC66;
+    --toggle-theme-bg-color: #222;
+    --toggle-theme-icon-color: #fff;
+    --hamburger-line-color: #fff;
+    --social-link-bg: #222;
+    --social-link-color: #fff;
+    --social-link-hover-bg: #00CC66;
+    --social-link-hover-color: #fff;
+    --resume-btn-bg: #fff;
+    --resume-btn-color: #000;
+    --resume-btn-hover-bg: #00CC66;
+    --resume-btn-hover-color: #fff;
+    --footer-bg-color: #424141;
+    --footer-text-color: #fff;
+    --profile-img-border: #00CC66;
+    --box-shadow: #333;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    --background-color: #000;
+    --text-color: #fff;
+    --header-bg-color: #000;
+    --logo-color: #7f4fff;
+    --logo-shadow: #00e6ff;
+    --nav-link-color: #fff;
+    --nav-link-hover-active-color: #00CC66;
+    --toggle-theme-bg-color: #000;
+    --toggle-theme-icon-color: #7f7fff;
+    --hamburger-line-color: #7f7fff;
+    --social-link-bg: #000;
+    --social-link-color: #fff;
+    --social-link-hover-bg: #00CC66;
+    --social-link-hover-color: #fff;
+    --resume-btn-bg: #fff;
+    --resume-btn-color: #000;
+    --resume-btn-hover-bg: #00CC66;
+    --resume-btn-hover-color: #fff;
+    --footer-bg-color: #424141;
+    --footer-text-color: #fff;
+    --profile-img-border: #00CC66;
+    --box-shadow: #333;
+}
+
+/* Light Mode Theme */
+body.light-mode {
+    --background-color: #f0f2f5;
+    --text-color: #333;
+    --header-bg-color: #fff;
+    --logo-color: #5d35b2;
+    --logo-shadow: #00aaff;
+    --nav-link-color: #333;
+    --nav-link-hover-active-color: #008040;
+    --toggle-theme-bg-color: #ddd;
+    --toggle-theme-icon-color: #333;
+    --hamburger-line-color: #333;
+    --social-link-bg: #e0e0e0;
+    --social-link-color: #333;
+    --social-link-hover-bg: #00CC66;
+    --social-link-hover-color: #fff;
+    --resume-btn-bg: #00CC66;
+    --resume-btn-color: #fff;
+    --resume-btn-hover-bg: #008040;
+    --resume-btn-hover-color: #fff;
+    --footer-bg-color: #424141;
+    --footer-text-color: #333;
+    --profile-img-border: #00CC66;
+    --box-shadow: #bfbbbb;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', Arial, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 48px 0 48px;
+    background: var(--header-bg-color);
+    transition: background 0.3s ease;
+}
+
+.logo {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: var(--logo-color);
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 0 var(--logo-shadow);
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 24px 0 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.05rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+}
+
+body.light-mode footer {
+    background: #fff;
+    color: #000;
+}
+
+.footer-left,
+.footer-right {
+    margin: 0 40px;
+    font-size: 1rem;
+    opacity: 0.85; }
+
+
+body.light-mode {
+    background: #fff;
+    color: #222;
+}
+
+body.light-mode .skill {
+    background: #f4f4f4;
+    color: #000;
+}
+
+body.light-mode .skill span {
+    color: #222;   
+}
+
+body.light-mode .skills-title {
+    color: #222;
+    /* Change to dark color for light mode */
+}
+
+body.light-mode .skills-title span {
+    color: #222;
+    /* Keep span text dark if you use spans inside the title */
+}
+:root {
+    --nav-links-bg: #111;
+}
+
+body.light-mode {
+    --nav-links-bg: #fff;
+}
+
+.skills-section {
+    margin: 60px auto 0 auto;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.skills-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+    letter-spacing: 1px;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 60px;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: -150px;
+    background: #181818;
+    border-radius: 18px;
+    box-shadow: var(--box-shadow);;
+    padding: 24px 18px 16px 18px;
+    margin: 8px 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.skill:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.28); }
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill span {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 8px;
+    font-family: 'Poppins', Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Add this to your CSS */
+@media (max-width: 1024px) {
+
+    main,
+    .projects-list {
+        margin-top: 100px;
+        /* Adjust as needed to clear the header */
+    } }
+
+/* Responsive */
+@media (max-width: 700px) {
+    .skills-row {
+        gap: 30px;
+    }
+
+    .skill img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skills-title {
+        font-size: 1.3rem;
+    } }
+
+@media (max-width: 1024px) {
+
+    header,
+    footer {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero {
+        gap: 32px;
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 32px;
+    }
+
+    .hero-right {
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+header {
+        position: fixed;
+    
+    }
+
+    main {
+        margin-top: 80px;
+        /* Set to header height */
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .toggle-theme,
+    .hamburger {
+        position: absolute;
+        top: 24px;
+        /* Adjust right values to control spacing between them */
+    }
+
+    @media (max-width: 700px) {
+        .toggle-theme {
+            right: 24px;
+            z-index: 102;
+            position: absolute;
+            top: 24px;
+        }
+
+        .hamburger {
+            right: 72px;
+            z-index: 102;
+            position: absolute;
+            top: 24px;
+            display: flex;
+        }
+    }
+}
