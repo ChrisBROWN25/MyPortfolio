@@ -82,7 +82,7 @@ body {
   background: var(--background-color);
   color: var(--text-color);
   font-family: 'Montserrat', Arial, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
+
 }
 
 header {
@@ -91,7 +91,7 @@ header {
   justify-content: space-between;
   padding: 32px 48px 0 48px;
   background: var(--header-bg-color);
-  transition: background 0.3s ease;
+  
 }
 
 .logo {

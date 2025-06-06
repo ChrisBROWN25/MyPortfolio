@@ -99,7 +99,7 @@ body {
     background: var(--background-color);
     color: var(--text-color);
     font-family: 'Montserrat', Arial, sans-serif;
-    transition: background 0.3s ease, color 0.3s ease;
+    
 }
 
 header {
@@ -108,7 +108,7 @@ header {
     justify-content: space-between;
     padding: 32px 48px 0 48px;
     background: var(--header-bg-color);
-    transition: background 0.3s ease;
+    
 }
 
 .logo {
@@ -173,7 +173,8 @@ body.light-mode {
     overflow: hidden;
     margin: 0 24px;
     position: relative;
-}
+   
+    }
 
 .project-red-green {
     background: #02b6d6;
@@ -353,7 +354,7 @@ body.light-mode .project-date {
 }
 
 body.light-mode .logo {
-    color: #000;
+    color: #5d35b2;
     text-shadow: 2px 2px 0 #00aaff;
 }
 

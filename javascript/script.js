@@ -167,12 +167,39 @@ const projectImages = [
 let currentIndexes = [0, 0, 0]; // <-- Fix: add a third index
 
 function nextImage(cardIdx) {
-  currentIndexes[cardIdx] = (currentIndexes[cardIdx] + 1) % projectImages[cardIdx].length;
-  document.getElementById(`project-img-${cardIdx}`).src = projectImages[cardIdx][currentIndexes[cardIdx]];
+  const img = document.getElementById(`project-img-${cardIdx}`);
+  gsap.to(img, {
+    x: -80,
+    opacity: 0,
+    duration: 0.25,
+    onComplete: () => {
+      currentIndexes[cardIdx] = (currentIndexes[cardIdx] + 1) % projectImages[cardIdx].length;
+      img.src = projectImages[cardIdx][currentIndexes[cardIdx]];
+      gsap.fromTo(
+        img,
+        { x: 80, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.25 }
+      );
+    }
+  });
 }
+
 function prevImage(cardIdx) {
-  currentIndexes[cardIdx] = (currentIndexes[cardIdx] - 1 + projectImages[cardIdx].length) % projectImages[cardIdx].length;
-  document.getElementById(`project-img-${cardIdx}`).src = projectImages[cardIdx][currentIndexes[cardIdx]];
+  const img = document.getElementById(`project-img-${cardIdx}`);
+  gsap.to(img, {
+    x: 80,
+    opacity: 0,
+    duration: 0.25,
+    onComplete: () => {
+      currentIndexes[cardIdx] = (currentIndexes[cardIdx] - 1 + projectImages[cardIdx].length) % projectImages[cardIdx].length;
+      img.src = projectImages[cardIdx][currentIndexes[cardIdx]];
+      gsap.fromTo(
+        img,
+        { x: -80, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.25 }
+      );
+    }
+  });
 }
 
 

@@ -85,7 +85,7 @@ body {
     background: var(--background-color);
     color: var(--text-color);
     font-family: 'Montserrat', Arial, sans-serif;
-    transition: background 0.3s ease, color 0.3s ease;
+    
 }
 
 header {
@@ -94,7 +94,6 @@ header {
     justify-content: space-between;
     padding: 32px 48px 0 48px;
     background: var(--header-bg-color);
-    transition: background 0.3s ease;
 }
 
 .logo {
@@ -174,8 +173,9 @@ body.light-mode {
     --nav-links-bg: #fff;
 }
 
+/* ...existing code... */
 .skills-section {
-    margin: 60px auto 0 auto;
+    margin: 60px auto 60px auto;
     max-width: 900px;
     text-align: center;
     margin-top: 0;
@@ -194,9 +194,11 @@ body.light-mode {
     justify-content: center;
     align-items: flex-end;
     gap: 60px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     flex-wrap: wrap;
 }
+
+/* ...existing code... */
 
 .skill {
     display: flex;
@@ -223,6 +225,9 @@ body.light-mode {
     object-fit: contain;
     margin-bottom: 10px;
 }
+
+.skill:hover img {
+    transform: rotate(-6deg) scale(1.12); }
 
 .skill span {
     color: #fff;

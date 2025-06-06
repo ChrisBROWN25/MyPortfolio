@@ -88,6 +88,28 @@
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="javascript/script.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // Animate the "Current Technologies" title
+      gsap.from('.skills-title', {
+        opacity: 0,
+        y: -40,
+        duration: 1,
+        delay: 0.5,
+        ease: "power2.out"
+      });
+
+      // Animate each skill card with a stagger
+      gsap.from('.skill', {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        stagger: 0.12,
+        delay: 1,
+        ease: "power2.out"
+      });
+    });
+  </script>
 </body>
 
 </html>
