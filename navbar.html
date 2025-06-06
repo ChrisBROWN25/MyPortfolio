@@ -1,275 +1,282 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CJLC Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CJLC Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
 
-    <body>
-<div class="logo">CJLC</div>
-<nav>
+<body>
+  <div class="logo">CJLC</div>
+  <nav>
     <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-    </nav>
-    <div class="toggle-theme">
-        <i class="fa-solid fa-moon"></i>
-    </div>
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+  </nav>
+  <div class="toggle-theme">
+    <i class="fa-solid fa-sun"></i>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    
-    <style>
-:root {
-  --background-color: #000;
-  --text-color: #fff;
-  --header-bg-color: #000;
-  --logo-color: #7f4fff;
-  --logo-shadow: #00e6ff;
-  --nav-link-color: #fff;
-  --nav-link-hover-active-color: #00CC66;
-  --toggle-theme-bg-color: #222;
-  --toggle-theme-icon-color: #fff;
-  --hamburger-line-color: #fff;
-  --social-link-bg: #222;
-  --social-link-color: #fff;
-  --social-link-hover-bg: #00CC66;
-  --social-link-hover-color: #fff;
-  --resume-btn-bg: #fff;
-  --resume-btn-color: #000;
-  --resume-btn-hover-bg: #00CC66;
-  --resume-btn-hover-color: #fff;
-  --footer-bg-color: #424141;
-  --footer-text-color: #fff;
-  --profile-img-border: #00CC66;
-}
 
-/* Dark Mode Overrides */
-body.dark-mode {
-  --background-color: #000;
-  --text-color: #fff;
-  --header-bg-color: #000;
-  --logo-color: #7f4fff;
-  --logo-shadow: #00e6ff;
-  --nav-link-color: #fff;
-  --nav-link-hover-active-color: #00CC66;
-  --toggle-theme-bg-color: #000;
-  --toggle-theme-icon-color: #7f7fff;
-  --hamburger-line-color: #7f7fff;
-  --social-link-bg: #000;
-  --social-link-color: #fff;
-  --social-link-hover-bg: #00CC66;
-  --social-link-hover-color: #fff;
-  --resume-btn-bg: #fff;
-  --resume-btn-color: #000;
-  --resume-btn-hover-bg: #00CC66;
-  --resume-btn-hover-color: #fff;
-  --footer-bg-color: #424141;
-  --footer-text-color: #fff;
-  --profile-img-border: #00CC66;
-}
+  <style>
+    :root {
+      --background-color: #000;
+      --text-color: #fff;
+      --header-bg-color: #000;
+      --logo-color: #7f4fff;
+      --logo-shadow: #00e6ff;
+      --nav-link-color: #fff;
+      --nav-link-hover-active-color: #00CC66;
+      --toggle-theme-bg-color: #222;
+      --toggle-theme-icon-color: #fff;
+      --hamburger-line-color: #fff;
+      --social-link-bg: #222;
+      --social-link-color: #fff;
+      --social-link-hover-bg: #00CC66;
+      --social-link-hover-color: #fff;
+      --resume-btn-bg: #fff;
+      --resume-btn-color: #000;
+      --resume-btn-hover-bg: #00CC66;
+      --resume-btn-hover-color: #fff;
+      --footer-bg-color: #424141;
+      --footer-text-color: #fff;
+      --profile-img-border: #00CC66;
+    }
 
-/* Light Mode Theme */
-body.light-mode {
-  --background-color: #f0f2f5;
-  --text-color: #333;
-  --header-bg-color: #fff;
-  --logo-color: #5d35b2;
-  --logo-shadow: #00aaff;
-  --nav-link-color: #333;
-  --nav-link-hover-active-color: #008040;
-  --toggle-theme-bg-color: #ddd;
-  --toggle-theme-icon-color: #333;
-  --hamburger-line-color: #333;
-  --social-link-bg: #e0e0e0;
-  --social-link-color: #333;
-  --social-link-hover-bg: #00CC66;
-  --social-link-hover-color: #fff;
-  --resume-btn-bg: #00CC66;
-  --resume-btn-color: #fff;
-  --resume-btn-hover-bg: #008040;
-  --resume-btn-hover-color: #fff;
-  --footer-bg-color: #424141;
-  --footer-text-color: #333;
-  --profile-img-border: #00CC66;
-}
-nav {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
+    /* Dark Mode Overrides */
+    body.dark-mode {
+      --background-color: #000;
+      --text-color: #fff;
+      --header-bg-color: #000;
+      --logo-color: #7f4fff;
+      --logo-shadow: #00e6ff;
+      --nav-link-color: #fff;
+      --nav-link-hover-active-color: #00CC66;
+      --toggle-theme-bg-color: #000;
+      --toggle-theme-icon-color: #7f7fff;
+      --hamburger-line-color: #7f7fff;
+      --social-link-bg: #000;
+      --social-link-color: #fff;
+      --social-link-hover-bg: #00CC66;
+      --social-link-hover-color: #fff;
+      --resume-btn-bg: #fff;
+      --resume-btn-color: #000;
+      --resume-btn-hover-bg: #00CC66;
+      --resume-btn-hover-color: #fff;
+      --footer-bg-color: #424141;
+      --footer-text-color: #fff;
+      --profile-img-border: #00CC66;
+    }
 
-.nav-links {
-  display: none;
-  gap: 50px;
-  list-style: none;
-  margin-left: 630px;
-  margin-top: -40px; 
-  padding: 0;
-}
+    /* Light Mode Theme */
+    body.light-mode {
+      --background-color: #f0f2f5;
+      --text-color: #333;
+      --header-bg-color: #fff;
+      --logo-color: #5d35b2;
+      --logo-shadow: #00aaff;
+      --nav-link-color: #333;
+      --nav-link-hover-active-color: #008040;
+      --toggle-theme-bg-color: #ddd;
+      --toggle-theme-icon-color: #333;
+      --hamburger-line-color: #333;
+      --social-link-bg: #e0e0e0;
+      --social-link-color: #333;
+      --social-link-hover-bg: #00CC66;
+      --social-link-hover-color: #fff;
+      --resume-btn-bg: #00CC66;
+      --resume-btn-color: #fff;
+      --resume-btn-hover-bg: #008040;
+      --resume-btn-hover-color: #fff;
+      --footer-bg-color: #424141;
+      --footer-text-color: #333;
+      --profile-img-border: #00CC66;
+    }
 
-.nav-links li a {
-  color: var(--nav-link-color);
-  display:block;
-  text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: bold;
-  transition: color 0.2s;
-}
+    nav {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
 
-.nav-links li a:hover {
-  color: var(--nav-link-hover-active-color);
-  text-decoration: underline;
-}
+    .nav-links {
+      display: none;
+      gap: 50px;
+      list-style: none;
+      margin-left: 630px;
+      margin-top: -40px;
+      padding: 0;
+    }
 
-/* Active Page Styling - now also uses variables */
-.nav-links li a.active {
-  color: var(--nav-link-hover-active-color);
-  text-decoration: underline;
-}
+    .nav-links li a {
+      color: var(--nav-link-color);
+      display: block;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
 
-.toggle-theme {
-  margin-left: 1350px;
-  font-size: 1.7rem;
-  color: var(--toggle-theme-icon-color);
-  background: var(--toggle-theme-bg-color);
-  border-radius: 50%;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: color 0.3s ease, background 0.3s ease;
-  margin-top: -55px; 
-}
+    .nav-links li a:hover {
+      color: var(--nav-link-hover-active-color);
+      text-decoration: underline;
+    }
 
-.toggle-theme i {
-  pointer-events: none;
-}
+    /* Active Page Styling - now also uses variables */
+    .nav-links li a.active {
+      color: var(--nav-link-hover-active-color);
+      text-decoration: underline;
+    }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: 24px;
-  width: 32px;
-  height: 32px;
-  justify-content: center;
-}
-
-.hamburger span {
-  height: 4px;
-  width: 100%;
-  background: var(--hamburger-line-color);
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-@media (max-width: 1024px) {
-
-header,
-footer {
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.hero {
-  gap: 32px;
-  padding: 0 16px;
-}
-}
-
-@media (max-width: 800px) {
-.hero {
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  margin-top: 32px;
-}
-
-.hero-right {
-  text-align: center;
-}
-}
-
-@media (min-width: 768px) {
-  #navLinks {
-    display: flex;
-  }
-  #hamburger {
-    display: none;
-  }
-}
-
-@media (max-width: 700px) {
-header {
-  position: relative;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.toggle-theme,
-.hamburger {
-  position: absolute;
-  top: 24px;
-  /* Adjust right values to control spacing between them */
-}
-
-  @media (max-width: 700px) {
-    header {
-    position: relative;
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .toggle-theme,
-  .hamburger {
-    position: absolute;
-    top: 24px;
-    /* Adjust right values to control spacing between them */
-  }
     .toggle-theme {
-    right: 72px;      /* Move toggle theme to where hamburger was */
-    z-index: 102;
-    position: absolute;
-    top: 85px;
-  }
+      margin-left: 1350px;
+      font-size: 1.7rem;
+      color: var(--toggle-theme-icon-color);
+      background: var(--toggle-theme-bg-color);
+      border-radius: 50%;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: color 0.3s ease, background 0.3s ease;
+      margin-top: -55px;
+    }
 
-  .hamburger {
-    right: 24px;      /* Move hamburger to the far right (arrow position) */
-    z-index: 102;
-    position: absolute;
-    top: 40px;
-    display: flex;
-  }
-}}
-    </style>
-    <script src="javascript/script.js"></script>
+    .toggle-theme i {
+      pointer-events: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 24px;
+      width: 32px;
+      height: 32px;
+      justify-content: center;
+    }
+
+    .hamburger span {
+      height: 4px;
+      width: 100%;
+      background: var(--hamburger-line-color);
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    @media (max-width: 1024px) {
+
+      header,
+      footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .hero {
+        gap: 32px;
+        padding: 0 16px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 32px;
+      }
+
+      .hero-right {
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #navLinks {
+        display: flex;
+      }
+
+      #hamburger {
+        display: none;
+      }
+    }
+
+
+    @media (max-width: 700px) {
+      header {
+        position: relative;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .toggle-theme,
+      .hamburger {
+        position: absolute;
+        top: 24px;
+        /* Adjust right values to control spacing between them */
+      }
+
+      @media (max-width: 700px) {
+        header {
+          position: relative;
+        }
+
+        .navbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .toggle-theme,
+        .hamburger {
+          position: absolute;
+          top: 24px;
+          /* Adjust right values to control spacing between them */
+        }
+
+        .toggle-theme {
+          right: 72px;
+          /* Move toggle theme to where hamburger was */
+          z-index: 102;
+          position: absolute;
+          top: 85px;
+        }
+
+        .hamburger {
+          right: 24px;
+          /* Move hamburger to the far right (arrow position) */
+          z-index: 102;
+          position: absolute;
+          top: 40px;
+          display: flex;
+        }
+      }
+    }
+  </style>
+  <script src="javascript/script.js"></script>
 </body>
