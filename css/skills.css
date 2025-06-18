@@ -157,12 +157,10 @@ body.light-mode .skill span {
 
 body.light-mode .skills-title {
     color: #222;
-    /* Change to dark color for light mode */
 }
 
 body.light-mode .skills-title span {
     color: #222;
-    /* Keep span text dark if you use spans inside the title */
 }
 
 :root {
@@ -173,7 +171,6 @@ body.light-mode {
     --nav-links-bg: #fff;
 }
 
-/* ...existing code... */
 .skills-section {
     margin: 60px auto 60px auto;
     max-width: 900px;
@@ -197,8 +194,6 @@ body.light-mode {
     margin-bottom: 10px;
     flex-wrap: wrap;
 }
-
-/* ...existing code... */
 
 .skill {
     display: flex;
@@ -238,17 +233,14 @@ body.light-mode {
     letter-spacing: 0.5px;
 }
 
-/* Add this to your CSS */
 @media (max-width: 1024px) {
 
     main,
     .projects-list {
         margin-top: 100px;
-        /* Adjust as needed to clear the header */
     }
 }
 
-/* Responsive */
 @media (max-width: 700px) {
     .skills-row {
         gap: 30px;
@@ -299,7 +291,6 @@ body.light-mode {
 
     main {
         margin-top: 80px;
-        /* Set to header height */
     }
 
     .navbar {
@@ -313,8 +304,28 @@ body.light-mode {
     .hamburger {
         position: absolute;
         top: 24px;
-        /* Adjust right values to control spacing between them */
     }
+
+        footer {
+            flex-direction: column;
+            text-align: center;
+            font-size: 0.95rem;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    
+        .footer-left,
+        .footer-right {
+            display: block;
+            width: 100%;
+            margin: 10px auto 0 auto;
+            text-align: center;
+            max-width: 90vw;
+        }
+    
+        .footer-right {
+            margin-bottom: 10px;
+        } }
 
     @media (max-width: 700px) {
         .toggle-theme {
@@ -332,4 +343,3 @@ body.light-mode {
             display: flex;
         }
     }
-}

@@ -52,7 +52,7 @@ body.dark-mode {
 /* Light Mode Theme */
 body.light-mode {
   --background-color: #f0f2f5;
-  --text-color: #333;
+  --text-color: #fff;
   --header-bg-color: #fff;
   --logo-color: #5d35b2;
   --logo-shadow: #00aaff;
@@ -74,15 +74,12 @@ body.light-mode {
   --profile-img-border: #00CC66;
 }
 
-
-
 body {
   margin: 0;
   padding: 0;
   background: var(--background-color);
   color: var(--text-color);
   font-family: 'Montserrat', Arial, sans-serif;
-
 }
 
 header {
@@ -90,8 +87,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 32px 48px 0 48px;
-  background: var(--header-bg-color);
-  
+  background: var(--header-bg-color); 
 }
 
 .logo {
@@ -133,7 +129,6 @@ footer {
   opacity: 0.85;
 }
 
-/* Light mode styles */
 body.light-mode {
   background: #fff;
   color: #222;
@@ -142,7 +137,7 @@ body.light-mode {
 body.light-mode header,
 body.light-mode footer {
   background: #fff;
-  color: #222;
+  color: #000;
 }
 
 body.light-mode .resume-btn {
@@ -154,12 +149,24 @@ body.light-mode .toggle-theme i {
   color: #222;
 }
 
+body.light-mode .about-title {
+  color: #000
+}
+
+body.light-mode .profile-text {
+  color: #000;
+}
+
 :root {
   --nav-links-bg: #111;
 }
 
 body.light-mode {
   --nav-links-bg: #fff;
+}
+
+.about-title {
+  color: #fff
 }
 
 .hero {
@@ -169,19 +176,16 @@ body.light-mode {
   min-height: 80vh;
   width: 100%;
   margin-top: -40px;
-
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  /* Stack items vertically */
   align-items: center;
   justify-content: center;
   min-height: 20vh;
   width: 100%;
   margin: 0;
-
 }
 
 .profile-img {
@@ -196,7 +200,7 @@ body.light-mode {
 
 .profile-text {
   max-width: 60vw;
-  color: var(--text-color);
+  color: #fff;
   font-size: 1rem;
   text-align: justify;
   font-family: 'Poppins', Arial, sans-serif;
@@ -247,9 +251,30 @@ body.light-mode {
   .hamburger {
     position: absolute;
     top: 24px;
-    /* Adjust right values to control spacing between them */
   }
-
+  
+    footer {
+      flex-direction: column;
+      text-align: center;
+      font-size: 0.95rem;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  
+        .footer-left,
+        .footer-right {
+          display: block;
+          width: 100%;
+          margin: 10px auto 0 auto;
+          text-align: center;
+          max-width: 90vw;
+        }
+    
+        .footer-right {
+          margin-bottom: 10px;
+        }
+      }
+        
   @media (max-width: 700px) {
     .toggle-theme {
       right: 24px;
@@ -266,4 +291,3 @@ body.light-mode {
       display: flex;
     }
   }
-}

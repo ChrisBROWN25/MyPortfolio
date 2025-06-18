@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="90" fill="#2563eb" opacity="0.9"/>
+  
+  <!-- Code brackets -->
+  <path d="M70 70 L50 100 L70 130 M130 70 L150 100 L130 130" 
+        stroke="white" 
+        stroke-width="8" 
+        stroke-linecap="round"/>
+  
+  <!-- Binary code lines -->
+  <g fill="white" font-family="monospace" font-size="12">
+    <text x="80" y="60">101010</text>
+    <text x="75" y="80">011010</text>
+    <text x="85" y="100">111000</text>
+    <text x="75" y="120">001101</text>
+    <text x="85" y="140">110011</text>
+  </g>
+  
+  <!-- Optional center text -->
+  <text x="100" y="180" 
+        text-anchor="middle" 
+        fill="white" 
+        font-family="Poppins" 
+        font-weight="bold"
+        font-size="16">CJLC</text>
+</svg>

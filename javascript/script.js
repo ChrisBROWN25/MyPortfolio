@@ -1,19 +1,17 @@
 // Fetch and inject navbar, then initialize all features after navbar is loaded
 document.addEventListener('DOMContentLoaded', function () {
   const nav = document.querySelector('.navbar');
-  if (!nav) return; // Exit if .navbar not found
+  if (!nav) return;
 
   fetch('navbar.html')
     .then(res => res.text())
     .then(data => {
       nav.innerHTML = data;
 
-      // Now that navbar is loaded, initialize features
       initTheme();
       initHamburger();
       highlightActiveNav();
 
-      // Animate nav links with GSAP when hamburger is clicked
       const hamburger = document.getElementById('hamburger');
       const navLinks = document.querySelectorAll('.nav-links li');
 
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
 
-      // Optional: Animate logo on nav link click
       const logo = document.querySelector('.logo');
       document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
@@ -48,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleTheme = document.querySelector('.toggle-theme');
     if (!toggleTheme) return;
     const themeIcon = toggleTheme.querySelector('i');
-    // Set default to light mode if no theme is saved
     let savedTheme = localStorage.getItem('theme');
     if (!savedTheme) {
       savedTheme = 'light';
@@ -121,24 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Preview project image in modal
-document.querySelectorAll('.project-image-slider img').forEach(img => {
-  img.style.cursor = 'pointer';
-  img.addEventListener('click', function() {
-      const modal = document.getElementById('image-modal');
-      const modalImg = document.getElementById('image-modal-img');
-      modal.style.display = 'flex';
-      modalImg.src = this.src;
-      modalImg.alt = this.alt || 'Project Preview';
-  });
-});
 
-document.querySelector('.image-modal-close').onclick = function() {
-  document.getElementById('image-modal').style.display = 'none';
-};
-document.getElementById('image-modal').onclick = function(e) {
-  if (e.target === this) this.style.display = 'none';
-};
 
 // Project images for each card
 const projectImages = [
@@ -164,7 +143,24 @@ const projectImages = [
     'images/neti-cms/project5.png'
   ]
 ];
-let currentIndexes = [0, 0, 0]; // <-- Fix: add a third index
+let currentIndexes = [0, 0, 0]; 
+
+function openImageModal(src) {
+  document.getElementById('modalImg').src = src;
+  document.getElementById('imageModal').classList.add('open');
+}
+
+document.getElementById('closeModal').onclick = function() {
+  document.getElementById('imageModal').classList.remove('open');
+  document.getElementById('modalImg').src = '';
+};
+
+document.getElementById('imageModal').onclick = function(e) {
+  if (e.target === this) {
+    this.classList.remove('open');
+    document.getElementById('modalImg').src = '';
+  }
+};
 
 function nextImage(cardIdx) {
   const img = document.getElementById(`project-img-${cardIdx}`);
@@ -201,5 +197,19 @@ function prevImage(cardIdx) {
     }
   });
 }
+
+function copyEmail() {
+  const email = document.getElementById('email').textContent;
+  navigator.clipboard.writeText(email);
+  alert('Email copied to clipboard!');
+}
+
+function animate() {
+  updateUI();
+  requestAnimationFrame(animate);
+}
+animate();
+
+
 
 

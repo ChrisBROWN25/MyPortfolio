@@ -80,7 +80,6 @@ body.light-mode {
 body.light-mode .toggle-theme,
 body.light-mode .toggle-theme i {
     color: #333;
-    /* or another visible color */
     background: #e0e0e0;
 }
 
@@ -294,52 +293,59 @@ body.light-mode {
     color: #fff;
 }
 
-/* ...existing code... */
-
-.image-modal {
+.modal {
     display: none;
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.7);
     align-items: center;
     justify-content: center;
 }
 
-.image-modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90vw;
+.modal.open {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 80vw;
     max-height: 80vh;
-    border-radius: 18px;
-    box-shadow: 0 4px 32px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.image-modal-close {
+.modal-content img {
+    max-width: 70vw;
+    max-height: 70vh;
+    border-radius: 4px;
+}
+
+.close-btn {
     position: absolute;
-    top: 32px;
-    right: 48px;
+    top: 10px;
+    right: 10px;
+    background: #333;
     color: #fff;
-    font-size: 2.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10000;
-    transition: color 0.2s;
-}
-
-.image-modal-close:hover {
-    color: #00CC66;
-}
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer; }
 
 body.dark-mode .project-date {
     color: #fff !important;
 }
 
-/* Light mode overrides for main layout and project components */
 body.light-mode {
     background: #fff;
     color: #000;
@@ -406,7 +412,7 @@ body.light-mode .image-modal-close:hover {
 
 body.light-mode footer {
     background: #fff;
-    color: #333;
+    color: #000;
 }
 
 
@@ -415,17 +421,14 @@ body.light-mode footer {
     color: #000;
 }
 
-/* For mobile and tablet: fit nav buttons to image box */
 @media (max-width: 900px) {
     .project-card {
         flex-direction: column;
         align-items: center;
-        /* Center children horizontally */
     }
 
     .project-image-slider {
         margin: 0 auto;
-        /* Center the image box */
         width: 100%;
         max-width: 340px;
     }
@@ -435,13 +438,31 @@ body.light-mode footer {
     .project-card {
         flex-direction: column;
         align-items: center;
-        /* Center children horizontally */
     }
 
     .project-image-slider {
-        margin: 0 auto;
-        /* Center the image box */
+        margin: auto;
         width: 100%;
         max-width: 95vw;
     }
-}
+
+        footer {
+            flex-direction: column;
+            text-align: center;
+            font-size: 0.95rem;
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    
+        .footer-left,
+        .footer-right {
+            display: block;
+            width: 100%;
+            margin: 10px auto 0 auto;
+            text-align: center;
+            max-width: 90vw;
+        }
+    
+        .footer-right {
+            margin-bottom: 10px;
+        } }

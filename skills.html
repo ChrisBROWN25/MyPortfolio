@@ -2,23 +2,23 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" href="SVG/icon.svg" type="image/x-icon">
+</head>
+
+<head>
   <script>
-    // Apply theme class before CSS loads to prevent flash
     (function () {
-      let theme = localStorage.getItem('theme');
-      if (!theme) {
-        theme = 'light';
-        localStorage.setItem('theme', 'light');
-      }
-      if (theme === 'light') {
-        document.documentElement.classList.add('light-mode');
-      }
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.classList.add(savedTheme === 'light' ? 'light-mode' : 'dark-mode');
+      document.body.className = savedTheme + '-mode';
     })();
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CJLC Portfolio</title>
   <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <script>
@@ -31,7 +31,6 @@
     </div>
   </header>
   <main>
-    <!-- Skills Section -->
     <section class="skills-section">
       <h2 class="skills-title">Current Technologies</h2>
       <div class="skills-row">
@@ -90,24 +89,69 @@
   <script src="javascript/script.js"></script>
   <script>
     window.addEventListener('DOMContentLoaded', () => {
-      // Animate the "Current Technologies" title
-      gsap.from('.skills-title', {
-        opacity: 0,
-        y: -40,
-        duration: 1,
-        delay: 0.5,
-        ease: "power2.out"
+      const skillsTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.skills-section',
+          start: 'top 80%',
+          toggleActions: 'play none none none'
+        },
+        defaults: { ease: "power3.out" }
       });
 
-      // Animate each skill card with a stagger
-      gsap.from('.skill', {
+      skillsTL.from('.skills-title', {
         opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.12,
-        delay: 1,
-        ease: "power2.out"
+        y: -60,
+        duration: 1.2,
+        ease: "back.out(1.7)",
+        scale: 1.1,
+        rotation: -2,
+        filter: "blur(2px)"
       });
+
+      skillsTL.from('.skill', {
+        opacity: 0,
+        y: 60,
+        duration: 0.9,
+        stagger: {
+          amount: 0.6,
+          from: "center"
+        },
+        scale: 0.8,
+        rotation: -5,
+        ease: "elastic.out(1, 0.5)",
+        filter: "blur(3px)"
+      }, "-=0.5");
+
+      const skillCards = document.querySelectorAll('.skill');
+      skillCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          gsap.to(card, {
+            scale: 1.05,
+            y: -5,
+            duration: 0.3,
+            ease: "power2.out",
+            boxShadow: "0 10px 25px rgba(0,0,0,0.1)"
+          });
+        });
+
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, {
+            scale: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "elastic.out(1, 0.5)",
+            boxShadow: "none"
+          });
+        });
+      });
+
+      skillsTL.to('.skills-title', {
+        y: -3,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      }, "+=1");
     });
   </script>
 </body>
